@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Edu+NSW+ACT+Foundation:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
     <script defer src="main.js"></script>
     <script
       defer
@@ -107,13 +108,215 @@
         </div>
       </div>
     </section>
-    <section id="skills">Skills</section>
-    <section id="projects">Projects</section>
-    <section id="contact">Contact</section>
+    <section id="skills">
+      <div class="skills_container">
+        <div class="skills_card">
+          <div class="skills_percent" style="--clr: #04fc43; --num: 80">
+            <div class="skills_dot"></div>
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills_number">
+              <h2>80<span>%</span></h2>
+              <p>html</p>
+            </div>
+          </div>
+        </div>
+        <div class="skills_card">
+          <div class="skills_percent" style="--clr: #fee800; --num: 80">
+            <div class="skills_dot"></div>
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills_number">
+              <h2>80<span>%</span></h2>
+              <p>css</p>
+            </div>
+          </div>
+        </div>
+        <div class="skills_card">
+          <div class="skills_percent" style="--clr: #ff00be; --num: 75">
+            <div class="skills_dot"></div>
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills_number">
+              <h2>75<span>%</span></h2>
+              <p>javascript</p>
+            </div>
+          </div>
+        </div>
+        <div class="skills_card">
+          <div class="skills_percent" style="--clr: #06ccff; --num: 65">
+            <div class="skills_dot"></div>
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills_number">
+              <h2>65<span>%</span></h2>
+              <p>jquery</p>
+            </div>
+          </div>
+        </div>
+        <div class="skills_card">
+          <div class="skills_percent" style="--clr: #18a8ad; --num: 65">
+            <div class="skills_dot"></div>
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills_number">
+              <h2>65<span>%</span></h2>
+              <p>react</p>
+            </div>
+          </div>
+        </div>
+        <div class="skills_card">
+          <div class="skills_percent" style="--clr: #d3852c; --num: 60">
+            <div class="skills_dot"></div>
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="skills_number">
+              <h2>60<span>%</span></h2>
+              <p>git & github</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="projects_container swiper mySwiper">
+        <div class="projects_wrap swiper-wrapper">
+          <div class="projects_slide swiper-slide">
+            `
+            <div class="projects_img">
+              <img src="./imgs/클론코딩 1.jpg" alt="" />
+            </div>
+            <div class="projects_texts">
+              <div class="projects_title">만다리나덕</div>
+              <div class="projects_description">
+                자바스크립트를 배우면서 제작한 페이지입니다
+              </div>
+              <ul class="projects_used">
+                <li>바닐라 자바스크립트</li>
+              </ul>
+              <div class="projects_btns">
+                <a
+                  href="https://github.com/LEEJINYOUN/LEEJINYOUN.github.io.MandarinaduckSite.git"
+                  class="projects_btn"
+                  >github</a
+                >
+                <a
+                  href="https://leejinyoun.github.io/LEEJINYOUN.github.io.MandarinaduckSite/"
+                  class="projects_btn"
+                  >homepage</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="projects_slide swiper-slide">
+            <div class="projects_img">
+              <img src="./imgs/클론코딩 2.jpg" alt="" />
+            </div>
+            <div class="projects_texts">
+              <div class="projects_title">유튜브</div>
+              <div class="projects_description">
+                자바스크립트를 배우면서 제작한 페이지입니다
+              </div>
+              <ul class="projects_used">
+                <li>바닐라 자바스크립트</li>
+              </ul>
+              <div class="projects_btns">
+                <a
+                  href="https://github.com/LEEJINYOUN/LEEJINYOUN.github.io.YoutubeSite.git"
+                  class="projects_btn"
+                  >github</a
+                >
+                <a
+                  href="https://leejinyoun.github.io/LEEJINYOUN.github.io.YoutubeSite/"
+                  class="projects_btn"
+                  >homepage</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="projects_slide swiper-slide">
+            <div class="projects_img">
+              <img src="./imgs/개인코딩 1.jpg" alt="" />
+            </div>
+            <div class="projects_texts">
+              <div class="projects_title">일단어 암기 사이트</div>
+              <div class="projects_description">
+                리액트를 배우면서 제작한 사이트입니다
+              </div>
+              <ul class="projects_used">
+                <li>리액트</li>
+              </ul>
+              <div class="projects_btns">
+                <a
+                  href="https://github.com/LEEJINYOUN/jpt_words.git"
+                  class="projects_btn"
+                  >github</a
+                >
+                <a
+                  href="https://leejinyoun.github.io/jpt_words/"
+                  class="projects_btn"
+                  >homepage</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social_icon">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li><a href="#"></a><ion-icon name="logo-linkedin"></ion-icon></li>
+        <li><a href="#"></a><ion-icon name="logo-instagram"></ion-icon></li>
+      </ul>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p>@2022 Lee Jin Young | All Rights Reserved</p>
+    </section>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="swiper-bundle.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
   </body>
 </html>

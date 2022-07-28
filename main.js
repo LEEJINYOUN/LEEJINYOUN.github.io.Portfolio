@@ -26,3 +26,10 @@ toggle.addEventListener("click", function () {
   toggle.classList.toggle("active");
   navbar_menu.classList.toggle("active");
 });
+
+let swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
