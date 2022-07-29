@@ -25,11 +25,21 @@
       <a href="#" class="logo">LJY's portfolio</a>
       <div id="toggle"></div>
       <ul id="navbar_menu">
-        <li class="navbar_menu_item"><a href="#home">Home</a></li>
-        <li class="navbar_menu_item"><a href="#about">About</a></li>
-        <li class="navbar_menu_item"><a href="#skills">Skills</a></li>
-        <li class="navbar_menu_item"><a href="#projects">Projects</a></li>
-        <li class="navbar_menu_item"><a href="#contact">Contact</a></li>
+        <li class="navbar_menu_item">
+          <a class="navbar_menu_item_link" href="#home">Home</a>
+        </li>
+        <li class="navbar_menu_item">
+          <a class="navbar_menu_item_link" href="#timeline">Timeline</a>
+        </li>
+        <li class="navbar_menu_item">
+          <a class="navbar_menu_item_link" href="#skills">Skills</a>
+        </li>
+        <li class="navbar_menu_item">
+          <a class="navbar_menu_item_link" href="#projects">Projects</a>
+        </li>
+        <li class="navbar_menu_item">
+          <a class="navbar_menu_item_link" href="#contact">Contact</a>
+        </li>
       </ul>
     </header>
     <section id="home">
@@ -38,7 +48,7 @@
           <span class="home_title_text1">제&nbsp;</span>
           <span class="home_title_text2">포트폴리오&nbsp;</span>
           <span class="home_title_text3">페이지에&nbsp;</span>
-          <span class="home_title_text4">오신걸&nbsp;</span>
+          <span class="home_title_text4">오신것을&nbsp;</span>
           <span class="home_title_text5">환영합니다.</span>
         </div>
         <div class="home_description">
@@ -50,7 +60,7 @@
           <span class="home_title_text11">입니다.</span>
         </div>
         <div class="home_btn_container home_title_text12">
-          <a href="#about" class="home_btn_center">
+          <a href="#timeline" class="home_btn_center">
             <button class="home_btn">
               <svg
                 width="180px"
@@ -67,7 +77,7 @@
                   class="home_btn_hl-line"
                 />
               </svg>
-              <span>about me</span>
+              <span>더 알아보기</span>
             </button>
           </a>
         </div>
@@ -87,28 +97,45 @@
         </ul>
       </div>
     </section>
-    <section id="about">
-      <div class="about_container">
-        <div class="about_top">
-          <img src="./imgs//증명사진 정장.jpg" alt="" />
-        </div>
-        <div class="about_botton">
-          <ul class="about_text">
-            <li>개발에 흥미를 느껴 코딩을 배우기 시작했습니다.</li>
-            <li>현재 프론트엔드 개발자가 되기 위해 공부하고 있습니다.</li>
-            <li>
-              꼼꼼한 성격,<br />
-              주어진 일은 포기하지 않고 해결해 나가는 것이 저의 장점입니다.
+    <section id="timeline">
+      <div class="section_head">time line</div>
+      <div class="timeline_container">
+        <div class="timeline_wrap">
+          <ul class="timeline_lists">
+            <li class="timeline_list_odd">
+              <h3 class="timeline_title">영진전문대 입학</h3>
+              <p>전자 정보통신학과</p>
+              <span class="timeline_circle"></span>
+              <span class="timeline_date">2013.03</span>
             </li>
-            <li>
-              배우는 것을 두려워 하지 않고,<br />
-              항상 겸손한 마음으로 배우겠습니다.
+            <li class="timeline_list_even">
+              <h3 class="timeline_title">군 입대</h3>
+              <p>육군병장 만기전역</p>
+              <span class="timeline_circle"></span>
+              <span class="timeline_date">2013.10 ~ 2015.07</span>
+            </li>
+            <li class="timeline_list_odd">
+              <h3 class="timeline_title">영진전문대 졸업</h3>
+              <span class="timeline_circle"></span>
+              <span class="timeline_date">2018.02</span>
+            </li>
+            <li class="timeline_list_even">
+              <h3 class="timeline_title">리쿠르트 R&D 스태핑</h3>
+              <p>일본 IT 기업 리쿠르트 R&D 스태핑 정사원 (기술직 파견사원)</p>
+              <span class="timeline_circle"></span>
+              <span class="timeline_date">2018.03 ~ 2020.09</span>
+            </li>
+            <li class="timeline_list_odd">
+              <h3 class="timeline_title">프론트엔드 개발 공부</h3>
+              <span class="timeline_circle"></span>
+              <span class="timeline_date">2022.04 ~ </span>
             </li>
           </ul>
         </div>
       </div>
     </section>
     <section id="skills">
+      <div class="section_head">skills</div>
       <div class="skills_container">
         <div class="skills_card">
           <div class="skills_percent" style="--clr: #04fc43; --num: 80">
@@ -191,10 +218,10 @@
       </div>
     </section>
     <section id="projects">
+      <div class="section_head">projects</div>
       <div class="projects_container swiper mySwiper">
         <div class="projects_wrap swiper-wrapper">
           <div class="projects_slide swiper-slide">
-            `
             <div class="projects_img">
               <img src="./imgs/클론코딩 1.jpg" alt="" />
             </div>
@@ -278,30 +305,27 @@
       </div>
     </section>
     <section id="contact">
-      <div class="waves">
-        <div class="wave" id="wave1"></div>
-        <div class="wave" id="wave2"></div>
-        <div class="wave" id="wave3"></div>
-        <div class="wave" id="wave4"></div>
+      <div class="contact_waves">
+        <div class="contact_wave" id="wave1"></div>
+        <div class="contact_wave" id="wave2"></div>
+        <div class="contact_wave" id="wave3"></div>
+        <div class="contact_wave" id="wave4"></div>
       </div>
-      <ul class="social_icon">
+      <ul class="contact_social_icon">
         <li>
-          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="https://github.com/LEEJINYOUN"
+            ><i class="fab fa-github"></i
+          ></a>
         </li>
-        <li>
-          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-        </li>
-        <li><a href="#"></a><ion-icon name="logo-linkedin"></ion-icon></li>
-        <li><a href="#"></a><ion-icon name="logo-instagram"></ion-icon></li>
       </ul>
-      <ul class="menu">
+      <ul class="contact_menu">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#timeline">Timeline</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <p>@2022 Lee Jin Young | All Rights Reserved</p>
+      <p>@ 2022. Lee Jin Young. All Rights Reserved</p>
     </section>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -309,14 +333,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="swiper-bundle.min.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+    <!-- <script src="swiper-bundle.min.js"></script> -->
   </body>
 </html>

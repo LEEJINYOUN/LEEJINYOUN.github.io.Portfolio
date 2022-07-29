@@ -26,21 +26,20 @@ body {
   background-color: transparent;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
-  z-index: 1000;
+  z-index: 1500;
 }
 
 #header.navbar_dark {
   height: 75px;
   background: #378dd4;
   transition: all 0.3s ease;
-  /* color: #378dd4; */
 }
 
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 10px 0 20px;
   height: 100%;
   font-size: 30px;
   font-family: "Anton", sans-serif;
@@ -113,11 +112,11 @@ body {
   font-family: "Edu NSW ACT Foundation", cursive;
 }
 
-.navbar_menu_item a {
+.navbar_menu_item_link {
   color: white;
 }
 
-.navbar_menu_item a::before {
+.navbar_menu_item_link::before {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -125,21 +124,33 @@ body {
   transform: translateX(-50%);
   width: 0;
   height: 3px;
-  background: black;
+  background: #c5d6e4;
   transition: all 0.3s ease-out;
 }
 
-.navbar_menu_item a:hover::before {
+.navbar_menu_item_link:hover::before {
   width: 100%;
 }
 
 section {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* font-size: 18vw; */
+}
+
+.section_head {
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
 }
 
 .home_context {
@@ -223,7 +234,6 @@ svg {
   color: white;
   font-size: 20px;
   font-weight: 100;
-  text-transform: uppercase;
 }
 
 @keyframes scale {
@@ -411,48 +421,132 @@ svg {
   }
 }
 
-.about_container {
+#timeline {
+  background-color: rgb(245, 245, 245);
+}
+
+.timeline_container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  place-items: center;
+  padding: 50px 0;
+}
+
+.timeline_wrap {
   width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 90%;
+  position: relative;
 }
 
-.about_top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 45%;
+.timeline_lists::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #4a7292c9;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 0;
 }
 
-.about_top img {
-  width: 270px;
-  height: 270px;
+.timeline_lists {
+  list-style: none;
+}
+
+.timeline_list_odd,
+.timeline_list_even {
+  width: 50%;
+  height: auto;
+  padding: 15px 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.384);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  z-index: 99;
+  position: relative;
+}
+
+.timeline_list_odd {
+  float: left;
+  clear: right;
+  transform: translateX(-30px);
+  text-align: right;
+}
+
+.timeline_list_odd .timeline_date {
+  right: 20px;
+}
+
+.timeline_list_even {
+  float: right;
+  clear: left;
+  transform: translateX(30px);
+}
+
+.timeline_lists li:nth-child(5) {
+  margin-bottom: 0;
+}
+
+.timeline_title {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.timeline_lists li p {
+  font-size: 15px;
+  color: #444;
+  margin: 7px 0;
+  line-height: 23px;
+}
+
+.timeline_date {
+  position: absolute;
+  top: -40px;
+  width: 160px;
+  height: 35px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #4a7292c9;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+
+.timeline_circle {
+  width: 30px;
+  height: 30px;
+  background-color: #92b3ce;
   border-radius: 50%;
+  position: absolute;
+  top: 0;
 }
 
-.about_botton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 55%;
+.timeline_circle::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #4a7292c9;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.about_text {
-  font-size: 25px;
-  font-weight: 700;
+.timeline_list_odd .timeline_circle {
+  right: -30px;
+  transform: translate(50%, -50%);
 }
 
-.about_text li {
-  margin: 10px 0;
-  line-height: 50px;
+.timeline_list_even .timeline_circle {
+  left: -30px;
+  transform: translate(-50%, -50%);
 }
 
 #skills {
-  background: #222;
+  background: #fff7d1;
 }
 
 .skills_container {
@@ -469,7 +563,8 @@ svg {
   position: relative;
   width: 220px;
   height: 250px;
-  background: #2a2a2a;
+  border-radius: 20px;
+  background: #616161;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -673,6 +768,7 @@ svg {
   width: 100%;
   background: #3586ff;
   min-height: 100px;
+  margin-top: 100px;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
@@ -680,8 +776,8 @@ svg {
   flex-direction: column;
 }
 
-#contact .social_icon,
-#contact .menu {
+.contact_social_icon,
+.contact_menu {
   position: relative;
   display: flex;
   justify-content: center;
@@ -689,13 +785,13 @@ svg {
   margin: 10px 0;
 }
 
-#contact .social_icon li,
-#contact .menu li {
+.contact_social_icon li,
+.contact_menu li {
   list-style: none;
 }
 
-#contact .social_icon li a,
-#contact .menu li a {
+.contact_social_icon li a,
+.contact_menu li a {
   font-size: 2em;
   color: #fff;
   margin: 0 10px;
@@ -703,11 +799,11 @@ svg {
   transition: 0.5s;
 }
 
-#contact .social_icon li a:hover {
+.contact_social_icon li a:hover {
   transform: translateY(-10px);
 }
 
-#contact .menu li a {
+.contact_menu li a {
   font-size: 1.2em;
   color: #fff;
   margin: 0 10px;
@@ -717,7 +813,7 @@ svg {
   opacity: 0.75;
 }
 
-#contact .menu li a:hover {
+.contact_menu li a:hover {
   opacity: 1;
 }
 
@@ -729,7 +825,7 @@ svg {
   font-size: 1.1em;
 }
 
-#contact .wave {
+.contact_wave {
   position: absolute;
   top: -100px;
   left: 0;
@@ -739,28 +835,28 @@ svg {
   background-size: 1000px 100px;
 }
 
-#contact .wave#wave1 {
+.contact_wave#wave1 {
   z-index: 1000;
   opacity: 1;
   bottom: 0;
   animation: animateWave 4s linear infinite;
 }
 
-#contact .wave#wave2 {
+.contact_wave#wave2 {
   z-index: 999;
   opacity: 0.5;
   bottom: 10px;
   animation: animateWave_02 4s linear infinite;
 }
 
-#contact .wave#wave3 {
+.contact_wave#wave3 {
   z-index: 1000;
   opacity: 0.2;
   bottom: 0;
   animation: animateWave 3s linear infinite;
 }
 
-#contact .wave#wave4 {
+.contact_wave#wave4 {
   z-index: 999;
   opacity: 0.7;
   bottom: 20px;
@@ -810,19 +906,14 @@ svg {
     font-size: 31px;
   }
 
-  .about_text {
-    font-size: 20px;
-    font-weight: 600;
-  }
-
-  .about_text li {
-    margin: 7px 0;
-    line-height: 40px;
+  .timeline_wrap {
+    width: 90%;
   }
 
   .skills_container {
     grid-template-columns: repeat(2, 3fr);
     gap: 50px;
+    margin-bottom: 50px;
   }
 }
 
@@ -842,6 +933,7 @@ svg {
     justify-content: center;
     align-items: center;
     background: #378dd4;
+    z-index: 1500;
   }
 
   #navbar_menu.active {
@@ -869,28 +961,44 @@ svg {
     font-size: 21px;
   }
 
-  .about_top {
+  #timeline {
+    padding-bottom: 50px;
+  }
+
+  .timeline_wrap {
+    width: 80%;
+    transform: translateX(15px);
+  }
+
+  .timeline_lists::after {
+    left: -30px;
+  }
+
+  .timeline_lists li {
     width: 100%;
-    height: 40%;
+    float: none;
+    clear: none;
+    margin-bottom: 80px;
   }
 
-  .about_top img {
-    width: 250px;
-    height: 250px;
+  .timeline_list_odd {
+    transform: translateX(0);
+    text-align: left;
   }
 
-  .about_botton {
-    height: 60%;
+  .timeline_list_odd .timeline_date {
+    left: 20px;
   }
 
-  .about_text {
-    font-size: 17px;
-    font-weight: 500;
+  .timeline_list_odd .timeline_circle {
+    left: -30px;
+    transform: translate(-50%, -50%);
   }
 
-  .about_text li {
-    line-height: 30px;
+  .timeline_list_even {
+    transform: translateX(0);
   }
+
   .skills_container {
     gap: 25px;
   }
