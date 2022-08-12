@@ -914,7 +914,7 @@ svg {
   height: 65px;
   font-size: 35px;
   color: white;
-  border: 1px solid black;
+  border: none;
   background-color: rgba(128, 128, 128, 0.7);
   border-radius: 50%;
   opacity: 0;
@@ -958,6 +958,7 @@ svg {
     font-size: 31px;
   }
 
+  .timeline_head,
   .skills_head,
   .projects_head {
     margin-top: 75px;
