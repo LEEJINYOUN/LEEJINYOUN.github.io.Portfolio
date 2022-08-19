@@ -1033,7 +1033,7 @@ svg {
     font-weight: 700;
   }
 
-  .navbar_menu_item a::before {
+  .navbar_menu_item_link::before {
     bottom: -4px;
   }
 
