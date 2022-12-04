@@ -28,13 +28,13 @@ body {
   z-index: 1500;
 }
 
-#header.navbar_dark {
+#header.navDark {
   height: 75px;
   background: #378dd4;
   transition: all 0.3s ease;
 }
 
-.logo {
+.navLogo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +48,7 @@ body {
   text-transform: uppercase;
 }
 
-#toggle {
+#navToggle {
   position: absolute;
   top: 0;
   right: 0;
@@ -62,7 +62,7 @@ body {
   transition: 0.2s;
 }
 
-#toggle::before {
+#navToggle::before {
   content: "";
   position: absolute;
   width: 28px;
@@ -72,7 +72,7 @@ body {
   transition: 0.2s;
 }
 
-#toggle::after {
+#navToggle::after {
   content: "";
   position: absolute;
   width: 28px;
@@ -82,15 +82,15 @@ body {
   transition: 0.2s;
 }
 
-#toggle.active::before {
+#navToggle.active::before {
   transform: translateY(0px) rotate(45deg);
 }
 
-#toggle.active::after {
+#navToggle.active::after {
   transform: translateY(0px) rotate(-45deg);
 }
 
-#navbar_menu {
+#navMenu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,7 +98,7 @@ body {
   height: 100%;
 }
 
-.navbar_menu_item {
+.navMenuItem {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,11 +111,11 @@ body {
   font-family: "Edu NSW ACT Foundation", cursive;
 }
 
-.navbar_menu_item_link {
+.navMenuItemLink {
   color: white;
 }
 
-.navbar_menu_item_link::before {
+.navMenuItemLink::before {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -127,12 +127,13 @@ body {
   transition: all 0.3s ease-out;
 }
 
-.navbar_menu_item_link:hover::before {
+.navMenuItemLink:hover::before {
   width: 100%;
 }
 
 #home,
 #timeline,
+#skills,
 #contact {
   position: relative;
   display: flex;
@@ -142,19 +143,7 @@ body {
   min-height: 100vh;
 }
 
-.section_head {
-  margin-bottom: 30px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
-  font-weight: bolder;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-transform: uppercase;
-}
-
-.home_context {
+.homeContext {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -167,8 +156,8 @@ body {
   font-weight: 700;
 }
 
-.home_title,
-.home_description {
+.homeTitle,
+.homeDescription {
   font-family: "Montserrat Medium";
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
@@ -179,15 +168,15 @@ body {
   line-height: 100px;
 }
 
-.home_title {
+.homeTitle {
   font-size: 45px;
 }
 
-.home_description {
+.homeDescription {
   font-size: 41px;
 }
 
-.home_btn_container {
+.homeBtnContainer {
   width: 180px;
   height: 60px;
   display: flex;
@@ -196,12 +185,12 @@ body {
   margin: 10px 0;
 }
 
-.home_btn_center {
+.homeBtnCenter {
   width: 180px;
   height: 60px;
 }
 
-.home_btn {
+.homeBtn {
   width: 180px;
   height: 60px;
   cursor: pointer;
@@ -222,16 +211,16 @@ svg {
   transition: 1s ease-in-out;
 }
 
-.home_btn:hover {
+.homeBtn:hover {
   transition: 1s ease-in-out;
   background: #4f95da;
 }
 
-.home_btn:hover svg {
+.homeBtn:hover svg {
   stroke-dashoffset: -480;
 }
 
-.home_btn span {
+.homeBtn span {
   color: white;
   font-size: 20px;
   font-weight: 100;
@@ -243,59 +232,59 @@ svg {
   }
 }
 
-.home_title span,
-.home_description span,
-.home_btn_container {
+.homeTitle span,
+.homeDescription span,
+.homeBtnContainer {
   display: inline-block;
   opacity: 0;
   filter: blur(4px);
 }
 
-.home_title_text1 {
+.homeTitleText1 {
   animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text2 {
+.homeTitleText2 {
   animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text3 {
+.homeTitleText3 {
   animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text4 {
+.homeTitleText4 {
   animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text5 {
+.homeTitleText5 {
   animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text6 {
+.homeTitleText6 {
   animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text7 {
+.homeTitleText7 {
   animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text8 {
+.homeTitleText8 {
   animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text9 {
+.homeTitleText9 {
   animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text10 {
+.homeTitleText10 {
   animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text11 {
+.homeTitleText11 {
   animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.home_title_text12 {
+.homeTitleText12 {
   animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
@@ -306,14 +295,14 @@ svg {
   }
 }
 
-.home_area {
+.homeArea {
   background: #51a2e4;
   background: -webkit-linear-gradient(to left, #8f94fb, #51a2e4);
   width: 100%;
   height: 100vh;
 }
 
-.home_circles {
+.homeCircles {
   position: absolute;
   top: 0;
   left: 0;
@@ -322,7 +311,7 @@ svg {
   overflow: hidden;
 }
 
-.home_circles li {
+.homeCircles li {
   position: absolute;
   display: block;
   list-style: none;
@@ -333,14 +322,14 @@ svg {
   bottom: -150px;
 }
 
-.home_circles li:nth-child(1) {
+.homeCircles li:nth-child(1) {
   left: 25%;
   width: 80px;
   height: 80px;
   animation-delay: 0s;
 }
 
-.home_circles li:nth-child(2) {
+.homeCircles li:nth-child(2) {
   left: 10%;
   width: 20px;
   height: 20px;
@@ -348,14 +337,14 @@ svg {
   animation-duration: 12s;
 }
 
-.home_circles li:nth-child(3) {
+.homeCircles li:nth-child(3) {
   left: 70%;
   width: 20px;
   height: 20px;
   animation-delay: 4s;
 }
 
-.home_circles li:nth-child(4) {
+.homeCircles li:nth-child(4) {
   left: 40%;
   width: 60px;
   height: 60px;
@@ -363,28 +352,28 @@ svg {
   animation-duration: 18s;
 }
 
-.home_circles li:nth-child(5) {
+.homeCircles li:nth-child(5) {
   left: 65%;
   width: 20px;
   height: 20px;
   animation-delay: 0s;
 }
 
-.home_circles li:nth-child(6) {
+.homeCircles li:nth-child(6) {
   left: 75%;
   width: 110px;
   height: 110px;
   animation-delay: 3s;
 }
 
-.home_circles li:nth-child(7) {
+.homeCircles li:nth-child(7) {
   left: 35%;
   width: 150px;
   height: 150px;
   animation-delay: 7s;
 }
 
-.home_circles li:nth-child(8) {
+.homeCircles li:nth-child(8) {
   left: 50%;
   width: 25px;
   height: 25px;
@@ -392,7 +381,7 @@ svg {
   animation-duration: 45s;
 }
 
-.home_circles li:nth-child(9) {
+.homeCircles li:nth-child(9) {
   left: 20%;
   width: 15px;
   height: 15px;
@@ -400,7 +389,7 @@ svg {
   animation-duration: 35s;
 }
 
-.home_circles li:nth-child(10) {
+.homeCircles li:nth-child(10) {
   left: 85%;
   width: 150px;
   height: 150px;
@@ -422,11 +411,25 @@ svg {
   }
 }
 
+.timeLineHeading,
+.skillsHeading,
+.projectHeading {
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+}
+
 #timeline {
   background-color: rgb(245, 245, 245);
 }
 
-.timeline_container {
+.timelineContainer {
   width: 100%;
   height: auto;
   display: grid;
@@ -434,13 +437,13 @@ svg {
   padding: 50px 0;
 }
 
-.timeline_wrap {
+.timelineWrap {
   width: 80%;
   height: 90%;
   position: relative;
 }
 
-.timeline_lists::after {
+.timelineLists::after {
   position: absolute;
   content: "";
   width: 2px;
@@ -452,12 +455,12 @@ svg {
   z-index: 0;
 }
 
-.timeline_lists {
+.timelineLists {
   list-style: none;
 }
 
-.timeline_list_odd,
-.timeline_list_even {
+.timelineListOdd,
+.timelineListEven {
   width: 50%;
   height: auto;
   padding: 15px 20px;
@@ -469,40 +472,40 @@ svg {
   position: relative;
 }
 
-.timeline_list_odd {
+.timelineListOdd {
   float: left;
   clear: right;
   transform: translateX(-30px);
   text-align: right;
 }
 
-.timeline_list_odd .timeline_date {
+.timelineListOdd .timelineDate {
   right: 20px;
 }
 
-.timeline_list_even {
+.timelineListEven {
   float: right;
   clear: left;
   transform: translateX(30px);
 }
 
-.timeline_lists li:nth-child(5) {
+.timelineLists li:nth-child(5) {
   margin-bottom: 0;
 }
 
-.timeline_title {
+.timelineTitle {
   font-size: 20px;
   font-weight: bolder;
 }
 
-.timeline_lists li p {
+.timelineLists li p {
   font-size: 15px;
   color: #444;
   margin: 7px 0;
   line-height: 23px;
 }
 
-.timeline_date {
+.timelineDate {
   position: absolute;
   top: -40px;
   width: 160px;
@@ -515,7 +518,7 @@ svg {
   font-size: 14px;
 }
 
-.timeline_circle {
+.timelineCircle {
   width: 30px;
   height: 30px;
   background-color: #92b3ce;
@@ -524,7 +527,7 @@ svg {
   top: 0;
 }
 
-.timeline_circle::after {
+.timelineCircle::after {
   content: "";
   width: 15px;
   height: 15px;
@@ -536,27 +539,18 @@ svg {
   transform: translate(-50%, -50%);
 }
 
-.timeline_list_odd .timeline_circle {
+.timelineListOdd .timelineCircle {
   right: -30px;
   transform: translate(50%, -50%);
 }
 
-.timeline_list_even .timeline_circle {
+.timelineListEven .timelineCircle {
   left: -30px;
   transform: translate(-50%, -50%);
 }
 
-.skillsHeading,
-.projectHeading {
-  font-family: "Rufina", serif;
-  font-size: 50px;
-  position: relative;
-  margin-bottom: 70px;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+.skillsHeading {
+  margin: 110px 0 50px 0;
 }
 
 .skillsContainer {
@@ -717,8 +711,8 @@ svg {
   flex-direction: column;
 }
 
-.contact_social_icon,
-.contact_menu {
+.contactSocialIcon,
+.contactMenu {
   position: relative;
   display: flex;
   justify-content: center;
@@ -726,13 +720,13 @@ svg {
   margin: 10px 0;
 }
 
-.contact_social_icon li,
-.contact_menu li {
+.contactSocialIcon li,
+.contactMenu li {
   list-style: none;
 }
 
-.contact_social_icon li a,
-.contact_menu li a {
+.contactSocialIcon li a,
+.contactMenu li a {
   font-size: 2em;
   color: #fff;
   margin: 0 10px;
@@ -740,11 +734,11 @@ svg {
   transition: 0.5s;
 }
 
-.contact_social_icon li a:hover {
+.contactSocialIcon li a:hover {
   transform: translateY(-10px);
 }
 
-.contact_menu li a {
+.contactMenu li a {
   font-size: 1.2em;
   color: #fff;
   margin: 0 10px;
@@ -754,7 +748,7 @@ svg {
   opacity: 0.75;
 }
 
-.contact_menu li a:hover {
+.contactMenu li a:hover {
   opacity: 1;
 }
 
@@ -766,7 +760,7 @@ svg {
   font-size: 1.1em;
 }
 
-.contact_wave {
+.contactWave {
   position: absolute;
   top: -100px;
   left: 0;
@@ -774,30 +768,31 @@ svg {
   height: 100px;
   background: url("/imgs/wave.png");
   background-size: 1000px 100px;
+  background-color: #efefef;
 }
 
-.contact_wave#wave1 {
+.contactWave#wave1 {
   z-index: 1000;
   opacity: 1;
   bottom: 0;
   animation: animateWave 4s linear infinite;
 }
 
-.contact_wave#wave2 {
+.contactWave#wave2 {
   z-index: 999;
   opacity: 0.5;
   bottom: 10px;
   animation: animateWave_02 4s linear infinite;
 }
 
-.contact_wave#wave3 {
+.contactWave#wave3 {
   z-index: 1000;
   opacity: 0.2;
   bottom: 0;
   animation: animateWave 3s linear infinite;
 }
 
-.contact_wave#wave4 {
+.contactWave#wave4 {
   z-index: 999;
   opacity: 0.7;
   bottom: 20px;
@@ -822,7 +817,7 @@ svg {
   }
 }
 
-.arrow-up {
+.arrowUp {
   position: fixed;
   bottom: 50px;
   right: 50px;
@@ -839,46 +834,46 @@ svg {
   transition: all 300ms ease-in;
 }
 
-.arrow-up:hover {
+.arrowUp:hover {
   background-color: rgba(128, 128, 128, 1);
 }
 
-.arrow-up.visible {
+.arrowUp.visible {
   opacity: 0.5;
   pointer-events: auto;
   z-index: 1100;
 }
 
 @media screen and (max-width: 1024px) {
-  .logo {
+  .navLogo {
     padding: 0 20px;
     font-size: 27px;
     letter-spacing: 3px;
   }
 
-  #navbar_menu {
+  #navMenu {
     padding: 0 10px;
   }
 
-  .navbar_menu_item {
+  .navMenuItem {
     margin: 0;
     width: 90px;
     font-size: 25px;
   }
 
-  .home_title {
+  .homeTitle {
     font-size: 33px;
   }
 
-  .home_description {
+  .homeDescription {
     font-size: 31px;
   }
 
-  .timeline_head {
-    margin-top: 70px;
+  .timeLineHeading {
+    margin-top: 100px;
   }
 
-  .timeline_wrap {
+  .timelineWrap {
     width: 90%;
   }
 
@@ -886,42 +881,17 @@ svg {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .projects_head {
+  .projectHeading {
     margin-top: 100px;
-  }
-
-  .projects_card {
-    flex-direction: column;
-    height: 700px;
-  }
-
-  .projects_card_img {
-    width: 100%;
-    height: 60%;
-  }
-
-  .projects_card_text {
-    width: 100%;
-    height: 40%;
-  }
-
-  .projects_card_skills {
-    line-height: 25px;
-    font-size: 16px;
-  }
-
-  .projects_card_btn {
-    padding: 5px 13px;
-    font-size: 14px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  #toggle {
+  #navToggle {
     display: flex;
   }
 
-  #navbar_menu {
+  #navMenu {
     position: fixed;
     bottom: -100%;
     right: 0;
@@ -935,28 +905,28 @@ svg {
     z-index: 1500;
   }
 
-  #navbar_menu.active {
+  #navMenu.active {
     height: calc(100vh - 70px);
     bottom: 0;
     width: 100%;
   }
 
-  .navbar_menu_item {
+  .navMenuItem {
     margin: 15px 0;
     height: 50px;
     font-size: 30px;
     font-weight: 700;
   }
 
-  .navbar_menu_item_link::before {
+  .navMenuItemLink::before {
     bottom: -4px;
   }
 
-  .home_title {
+  .homeTitle {
     font-size: 23px;
   }
 
-  .home_description {
+  .homeDescription {
     font-size: 21px;
   }
 
@@ -964,50 +934,56 @@ svg {
     padding-bottom: 50px;
   }
 
-  .timeline_head {
-    margin-top: 80px;
+  .timeLineHeading,
+  .skillsHeading,
+  .projectHeading {
+    font-size: 35px;
   }
 
-  .timeline_wrap {
+  .timeLineHeading {
+    margin-top: 110px;
+  }
+
+  .timelineWrap {
     width: 80%;
     transform: translateX(15px);
   }
 
-  .timeline_lists::after {
+  .timelineLists::after {
     left: -30px;
   }
 
-  .timeline_lists li {
+  .timelineLists li {
     width: 100%;
     float: none;
     clear: none;
     margin-bottom: 80px;
   }
 
-  .timeline_list_odd {
+  .timelineListOdd {
     transform: translateX(0);
     text-align: left;
   }
 
-  .timeline_list_odd .timeline_date {
+  .timelineListOdd .timelineDate {
     left: 20px;
   }
 
-  .timeline_list_odd .timeline_circle {
+  .timelineListOdd .timelineCircle {
     left: -30px;
     transform: translate(-50%, -50%);
   }
 
-  .timeline_list_even {
+  .timelineListEven {
     transform: translateX(0);
-  }
-
-  .skillsHeading {
-    font-size: 35px;
   }
 
   .skillsContainer {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projectHeading {
+    margin-top: 80px;
   }
 
   .projectSlideContent {
@@ -1026,7 +1002,7 @@ svg {
     font-size: 18px;
   }
 
-  .arrow-up {
+  .arrowUp {
     width: 50px;
     height: 50px;
     font-size: 30px;
